@@ -15,7 +15,12 @@ from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import GridSearchCV
 from xgboost import XGBRegressor
+import streamlit as st
+import numpy as np
+from sklearn.linear_model import LinearRegression
 
+model = LinearRegression()
+model.fit(X, y)
 
 model= pd.read_csv("hprice.csv")
 model.info()
